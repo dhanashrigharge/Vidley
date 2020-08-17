@@ -1,0 +1,15 @@
+﻿@model Vidley.ViewModels.RandomMovieViewModel
+    @{
+    ViewBag.Title = "MovieDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>@Model.Movie.Name</h2>
+    <ul>
+        <li>Genre: @Model.Movie.Genre.Name</li>
+        <li>Release Date: @Html.ValueFor(m=>m.Movie.ReleaseDate, "{0:d MMM yyyy}")</li>
+        <li>Date Added: @Html.ValueFor(m => m.Movie.DateAdded, "{0:d MMM yyyy}")</li>
+        <li>Number In Stock: @Model.Movie.NumberInstock</li>
+    </ul>
+
+

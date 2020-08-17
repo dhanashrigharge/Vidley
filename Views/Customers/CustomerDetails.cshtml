@@ -1,0 +1,15 @@
+﻿@model Vidley.Models.Customer
+@{
+    ViewBag.Title = "CustomerDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li>@Model.Membershiptype.Name</li>
+    @if (Model.BirthDate != null)
+    {
+    <li>@Html.ValueFor(c => c.BirthDate, "{0:dd/mm/yyyy}")</li>
+    }
+</ul>
+

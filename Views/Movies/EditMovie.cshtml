@@ -1,0 +1,37 @@
+﻿@model Vidley.ViewModels.NewMovieViewModel
+@{
+    ViewBag.Title = "EditMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Movie</h2>
+
+@using (Html.BeginForm("Save", "Movies"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(n => n.Name)
+        @Html.TextBoxFor(n => n.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(n => n.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(b => b.ReleaseDate)
+        @Html.TextBoxFor(b => b.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.ReleaseDate)
+    </div>
+   
+    <div class="form-group">
+        @Html.LabelFor(m => m.GenreId)
+        @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genre, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.GenreId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(b => b.NumberInstock)
+        @Html.TextBoxFor(b => b.NumberInstock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.NumberInstock)
+    </div>
+    @Html.HiddenFor(i => i.Id);
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
