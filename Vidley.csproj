@@ -222,6 +222,14 @@
     <Compile Include="Migrations\202008171056223_PopulateMembershipType2.Designer.cs">
       <DependentUpon>202008171056223_PopulateMembershipType2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008180916019_AdditionalFieldsToMembershiptype.cs" />
+    <Compile Include="Migrations\202008180916019_AdditionalFieldsToMembershiptype.Designer.cs">
+      <DependentUpon>202008180916019_AdditionalFieldsToMembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008180922398_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\202008180922398_PopulateMembershipType.Designer.cs">
+      <DependentUpon>202008180922398_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -229,6 +237,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -515,6 +524,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008171056223_PopulateMembershipType2.resx">
       <DependentUpon>202008171056223_PopulateMembershipType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008180916019_AdditionalFieldsToMembershiptype.resx">
+      <DependentUpon>202008180916019_AdditionalFieldsToMembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008180922398_PopulateMembershipType.resx">
+      <DependentUpon>202008180922398_PopulateMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
